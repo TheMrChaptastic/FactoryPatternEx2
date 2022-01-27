@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FactoryPatternEx2
 {
@@ -10,7 +11,7 @@ namespace FactoryPatternEx2
         var uStr = Console.ReadLine();
 
         IDataAccess database = DataAccessFactory.GetDataAccessType(uStr);
-        database.LoadData();
+        List<Product> products = database.LoadData();
         database.SaveData();
         }
     }
