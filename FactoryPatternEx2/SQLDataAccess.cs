@@ -6,9 +6,11 @@ namespace FactoryPatternEx2
 {
     public class SQLDataAccess : IDataAccess
     {
-        public void LoadData()
+        public static List<Product> products = new List<Product>() { new Product() { Name = "Skateboard", Price = 20.00 }, new Product() { Name = "Xbox", Price = 400.00 } };
+        public List<Product> LoadData()
         {
             Console.WriteLine("I am reading data from SQL database");
+            return products;
         }
 
         public void SaveData()

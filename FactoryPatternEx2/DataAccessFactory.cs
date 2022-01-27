@@ -17,6 +17,10 @@ namespace FactoryPatternEx2
                 case "sql":
                 case "Sql":
                 case "SQL":
+                case "mysql":
+                case "Mysql":
+                case "MySql":
+                case "MySQL":
                     return new SQLDataAccess();
                 case "mongo":
                 case "Mongo":
